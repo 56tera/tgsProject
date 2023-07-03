@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 
 static public class MyHelper
 {
-    public enum MyScene { TitleScene, MainScene };
+    public enum MyScene { TitleScene, MainScene, ResultScene };
     public static MyScene scene;
 
     static Dictionary<string, MyScene> sceneDic = new Dictionary<string, MyScene> {
         {"TitleScene", MyScene.TitleScene},
         {"MainScene", MyScene.MainScene},
+        {"ResultScene", MyScene.ResultScene},
     };
 
     //enumのシーンで取得したシーンをロード
