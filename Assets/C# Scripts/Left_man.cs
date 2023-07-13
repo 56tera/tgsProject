@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Left_man : NPC_Control
+class Left_man : MonoBehaviour
 {
-    ScoreManager2 scoreManager2;
-
-    public override void  Start()
+    public void  Start()
     {
-        scoreManager2 = GameObject.Find("ScoreManager2").GetComponent<ScoreManager2>();
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
         if(Input.GetKey(KeyCode.A)){
             //スコア加算の処理
-            scoreManager2.AddScore();
+            ScoreManager2.Instance.AddScore();
             Destroy(this.gameObject);
         }
     }

@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Front_man : NPC_Control
+public class Front_man : MonoBehaviour
 {
     // Start is called before the first frame update
-    ScoreManager2 scoreManager2;
 
-    public override void  Start()
+    public void  Start()
     {
-        scoreManager2 = GameObject.Find("ScoreManager2").GetComponent<ScoreManager2>();
+        //float time
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
+        //time += delta_time
         if(Input.GetKey(KeyCode.W)){
             //スコア加算の処理
-            scoreManager2.AddScore();
+            ScoreManager2.Instance.AddScore();
             Destroy(this.gameObject);
         }
     }

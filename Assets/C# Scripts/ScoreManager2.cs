@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager2 : MonoBehaviour
+public class ScoreManager2 : SingletonMonoBehaviour<ScoreManager2>
 {
 
     public Text ScoreText;
     int CountCombo;
     float time;
-    int score = 0;
+    private int score = 0;
 
     void Start()
     {
+
         ScoreText.text = "SCORE:" + score;
     }
 

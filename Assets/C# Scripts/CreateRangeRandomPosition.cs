@@ -49,7 +49,7 @@ public class CreateRangeRandomPosition : MonoBehaviour
                     if(!flag_front){
                         x = rangeF.position.x;
                         y = rangeF.position.y;
-                        z = 0;
+                        z = 50;
                         Instantiate(PrefabF, new Vector3(x,y,z), Quaternion.identity, parent);
                         flag_front = true;
                     }
@@ -58,7 +58,7 @@ public class CreateRangeRandomPosition : MonoBehaviour
                     if(!flag_left){
                         x = rangeL.position.x;
                         y = rangeL.position.y;
-                        z = 0; 
+                        z = 50; 
                         Instantiate(PrefabL, new Vector3(x,y,z), Quaternion.identity, parent);
                         flag_left = true;
                     }
@@ -67,7 +67,7 @@ public class CreateRangeRandomPosition : MonoBehaviour
                     if(!flag_right){
                         x = rangeR.position.x;
                         y = rangeR.position.y; 
-                        z = 0;
+                        z = 50;
                         Instantiate(PrefabR, new Vector3(x,y,z), Quaternion.identity, parent);
                         flag_right = true;
                     }

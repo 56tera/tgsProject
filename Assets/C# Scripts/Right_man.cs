@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Right_man : NPC_Control
+class Right_man : MonoBehaviour
 {
-    ScoreManager2 scoreManager2;
-
-    public override void  Start()
+    public void  Start()
     {
-        scoreManager2 = GameObject.Find("ScoreManager2").GetComponent<ScoreManager2>();        
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
         if(Input.GetKey(KeyCode.D)){
-            scoreManager2.AddScore();
+            ScoreManager2.Instance.AddScore();
             Destroy(this.gameObject);
         }
     }
