@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c827b5cc04e5c4bb2a8c5a2af95a7491
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - NPCPrefab: {fileID: 4004706575290614751, guid: 4b5d82ef2cfa94b209083d7f4c07e034, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
