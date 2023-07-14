@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Right_man : MonoBehaviour
+class Right_man : NPC_Control
 {
-    public void  Start()
+    [SerializeField]
+    [Tooltip("爆発エフェクト")]
+    private GameObject ExplosionPrefab;
+
+    public override void  Start()
     {
+        time = 0;
     }
 
     // Update is called once per frame
-    public void Update()
+    public override void Update()
     {
+        time = time + Time.deltaTime;
         if(Input.GetKey(KeyCode.D)){
-            ScoreManager2.Instance.AddScore();
+            ScoreManager2.Instance.AddScore(time);
+            Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity, this.transform.parent);
             Destroy(this.gameObject);
         }
     }

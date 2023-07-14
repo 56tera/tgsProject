@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Front_man : MonoBehaviour
+class Front_man : NPC_Control
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    [Tooltip("爆発エフェクト")]
+    private GameObject ExplosionPrefab;
 
-    public void  Start()
+    // Start is called before the first frame update
+    public override void  Start()
     {
-        //float time
+        time = 0;
     }
 
     // Update is called once per frame
-    public void Update()
+    public override void Update()
     {
-        //time += delta_time
+        time = time + Time.deltaTime;
         if(Input.GetKey(KeyCode.W)){
             //スコア加算の処理
-            ScoreManager2.Instance.AddScore();
+            ScoreManager2.Instance.AddScore(time);
+            Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity, this.transform.parent);
             Destroy(this.gameObject);
         }
     }

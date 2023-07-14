@@ -21,9 +21,9 @@ public class ScoreManager2 : SingletonMonoBehaviour<ScoreManager2>
     {
         time = time + Time.deltaTime;
     }
-    public void AddScore()
+    public void AddScore(float time)
     {
-        score += 1000 + (CountCombo * 100);
+        score += 1000 + (int)(50 - time);
         CountCombo++;
 
         ScoreText.text = "SCORE:" + score;
