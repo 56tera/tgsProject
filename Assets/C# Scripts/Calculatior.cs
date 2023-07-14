@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class Calculatior : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+//public class Calculatior : MonoBehaviour
+//{
+//    public static Calculatior instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+//private void Awake()
+//{
+//    if (instance == null)
+//    {
+//        instance = this;
+//        DontDestroyOnLoad(gameObject);
+//    }
+//    else
+//    {
+//        Destroy(gameObject);
+//    }
+//}
+
+//public int score = 0;
+//public int combo = 0;
+
+//public int addCombo()
+//{
+//    combo++;
+//}
+//}
