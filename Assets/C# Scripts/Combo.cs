@@ -6,27 +6,27 @@ using System;
 
 public class Combo : MonoBehaviour
 {
-    public static int TotalCombo;
+    public static int CountCombo;
 
     public Text TextCombo;
 
     void Start()
     {
-        TotalCombo = 0;
+        CountCombo = 0;
     }
 
     void Update()
     {
-        TextCombo.text = String.Format(TotalCombo.ToString() + "Combo");
+        TextCombo.text = String.Format(CountCombo.ToString() + "Combo");
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            TotalCombo++;
+            CountCombo++;
             
         }
         else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.X))
         {
-            TotalCombo = 0;
+            CountCombo = 0;
         }
     }
 }

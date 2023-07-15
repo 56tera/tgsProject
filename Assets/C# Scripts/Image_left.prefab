@@ -28,11 +28,11 @@ RectTransform:
   m_GameObject: {fileID: 3308467945944235525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -89,3 +89,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05a10f106b1b4d83a5077aff5543780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  ExplosionPrefab: {fileID: 3349547723404884779, guid: 3362864d6a6d64e91bab0d152c36f270, type: 3}
