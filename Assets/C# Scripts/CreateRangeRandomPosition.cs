@@ -41,7 +41,7 @@ public class CreateRangeRandomPosition : MonoBehaviour
         flag = Random.Range(1, 100) % 3;
 
         // 約1秒置きにランダムに生成されるようにする。
-        if(time > Random.Range(1.0f, 1.5f))
+        if(time > Random.Range(1.0f, 2.0f))
 		{
             var parent = this.transform;
             switch(flag){

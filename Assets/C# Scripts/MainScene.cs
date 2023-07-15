@@ -18,6 +18,6 @@ public class MainScene : MonoBehaviour
 
     void ChangeScene()
     {
-        MyHelper.MyLoadScene(MyHelper.MyScene.ResultScene);
+        MyHelper.MyLoadScene(MyHelper.MyScene.TitleScene);
     }
 }

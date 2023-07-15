@@ -8,6 +8,7 @@ class Right_man : NPC_Control
     [Tooltip("爆発エフェクト")]
     private GameObject ExplosionPrefab;
 
+
     public override void  Start()
     {
         time = 0;

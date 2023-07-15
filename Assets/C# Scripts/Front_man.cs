@@ -8,7 +8,7 @@ class Front_man : NPC_Control
     [Tooltip("爆発エフェクト")]
     private GameObject ExplosionPrefab;
 
-    // Start is called before the first frame update
+
     public override void  Start()
     {
         time = 0;
@@ -19,7 +19,6 @@ class Front_man : NPC_Control
     {
         time = time + Time.deltaTime;
         if(Input.GetKey(KeyCode.W)){
-            //スコア加算の処理
             ScoreManager2.Instance.AddScore(time);
             Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity, this.transform.parent);
             Destroy(this.gameObject);

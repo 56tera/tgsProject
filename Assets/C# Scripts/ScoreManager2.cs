@@ -23,9 +23,12 @@ public class ScoreManager2 : SingletonMonoBehaviour<ScoreManager2>
     }
     public void AddScore(float time)
     {
-        score += 1000 + (int)(50 - time);
-        CountCombo++;
+        score += 1000 + (int)(50-time);
 
         ScoreText.text = "SCORE:" + score;
+    }
+
+    public int GetScore() {
+        return score;
     }
 }

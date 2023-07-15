@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 1275651846370002501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.045, y: 0.045, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,4 +90,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  ExplosionPrefab: {fileID: 7354654194174366328, guid: 5ce1677af805846aca5d619ce81276d3, type: 3}
+  ExplosionPrefab: {fileID: 3349547723404884779, guid: 3362864d6a6d64e91bab0d152c36f270, type: 3}
