@@ -12,12 +12,12 @@ public class Explosion : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
+    void Update()
     {
         time += Time.deltaTime;
-        if (time > 0.5f)
-        {
+        if(time > 0.5f){
             Destroy(this.gameObject);
-        }
+        } 
+        
     }
 }

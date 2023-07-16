@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class ScoreManager2 : SingletonMonoBehaviour<ScoreManager2>
 {
-
-    public Text ScoreText;
     int CountCombo;
     float time;
-    private int score = 0;
+    public int score;
 
     void Start()
     {
-
-        ScoreText.text = "SCORE:" + score;
+        score = 0;
+         DontDestroyOnLoad(this.gameObject);
     }
 
     void update()
@@ -24,8 +22,6 @@ public class ScoreManager2 : SingletonMonoBehaviour<ScoreManager2>
     public void AddScore(float time)
     {
         score += 1000 + (int)(50-time);
-
-        ScoreText.text = "SCORE:" + score;
     }
 
     public int GetScore() {

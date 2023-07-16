@@ -4,9 +4,9 @@ using UnityEngine;
 
 class Front_man : NPC_Control
 {
-    // [SerializeField]
-    // [Tooltip("爆発エフェクト")]
-    // private GameObject ExplosionPrefab;
+    [SerializeField]
+    [Tooltip("爆発エフェクト")]
+    private GameObject ExplosionPrefab;
 
 
     public override void  Start()
@@ -20,7 +20,7 @@ class Front_man : NPC_Control
         time = time + Time.deltaTime;
         if(Input.GetKey(KeyCode.W)){
             ScoreManager2.Instance.AddScore(time);
-            //Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity, this.transform.parent);
+            Instantiate(ExplosionPrefab, this.transform.position, Quaternion.identity, this.transform.parent);
             Destroy(this.gameObject);
         }
     }
